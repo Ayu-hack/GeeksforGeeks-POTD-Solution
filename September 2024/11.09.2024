@@ -1,3 +1,6 @@
+
+//JAVA CODE
+
 class Solution {
     // Function to return the minimum cost of connecting the ropes.
     public long minCost(long[] arr) {
