@@ -1,4 +1,4 @@
-# 🌟 GeeksforGeeks Problem of the Day (POTD) Solutions 🌟
+## 🌟 GeeksforGeeks Problem of the Day (POTD) Solutions 🌟
 
 Welcome to the GeeksforGeeks POTD Solutions repository! 🎉 This repository is dedicated to providing solutions to the Problem of the Day challenges from GeeksforGeeks. The solutions are written in a variety of programming languages and cover a wide range of topics.
 
