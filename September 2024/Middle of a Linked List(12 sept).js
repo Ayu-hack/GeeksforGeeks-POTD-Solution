@@ -1,5 +1,9 @@
 // JAVA CODE
 
+// PROBLEM NAME - Middle of a Linked List
+// Date - 12 Sept
+
+
 class Solution {
     int getMiddle(Node head) {
         if (head == null){ 
