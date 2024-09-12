@@ -1,6 +1,9 @@
 
 //JAVA CODE
 
+// PROBLEM NAME - Minimum Cost of ropes
+// DATE - 11 SEPT
+
 class Solution {
     // Function to return the minimum cost of connecting the ropes.
     public long minCost(long[] arr) {
