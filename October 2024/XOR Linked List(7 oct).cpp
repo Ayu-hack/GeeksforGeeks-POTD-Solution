@@ -1,3 +1,6 @@
+//C++ CODE
+
+
 struct Node *insert(struct Node *head, int data) {
     // Code here
     Node *temp = new Node(data);
