@@ -8,8 +8,14 @@ Welcome to the GeeksforGeeks POTD Solutions repository! 🎉 This repository is 
 - Submit past GeeksforGeeks problem solutions along with the date and month.
 - Ensure they are placed within the appropriate month folder in the repository.
 ### Weekly Contest Solutions:
--Contributions for solutions to weekly coding contests (from platforms like LeetCode, Codeforces, etc.) are welcome.
--Please ensure that all contributions follow the guidelines and are properly organized within the respective folders.
+- Contributions for solutions to weekly coding contests (from platforms like LeetCode, Codeforces, etc.) are welcome.
+- Please ensure that all contributions follow the guidelines and are properly organized within the respective folders.
+
+## How to Contribute:
+- Fork the Repository: Create a copy of the repo under your GitHub account and ⭐ star the repo to show your support!
+- Find the Issue: Browse the issues, choose one you’d like to work on, and comment with "assign me."
+- Make a Pull Request (PR): Submit a PR with your solution. Include a screenshot of the working feature or bug fix to help us review it faster!
+- Your contributions are valuable, and we can't wait to see what you'll bring to the project! 🎉
 
 
 ## 📚 What is Problem of the Day?
