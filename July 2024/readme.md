@@ -1,1 +1,1 @@
-### Added all POTDs of GFG JULY Month
+### Please Add POTDs of GFG JULY Month
