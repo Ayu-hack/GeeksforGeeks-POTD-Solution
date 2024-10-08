@@ -503,6 +503,8 @@ def visualize_images(path, target_size=(256, 256), num_images=5):
     plt.tight_layout()
     plt.show()
 
+# Unable to make changes directly so added py file
+
 """<a id="1"></a>
 <div id="animated-container" style="position: relative;
             border-radius: 10px;
