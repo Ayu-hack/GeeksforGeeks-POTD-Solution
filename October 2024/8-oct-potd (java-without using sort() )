@@ -1,0 +1,16 @@
+class Solution {
+    public static int pairsum(int[] arr) {
+        int f = Integer.MIN_VALUE;
+        int s = Integer.MIN_VALUE;
+
+        for (int num : arr) {
+            if (num > f) {
+                s = f;
+                f = num;
+            } else if (num > s) {
+                s = num;
+            }
+        }
+        return f + s;
+    }
+}
