@@ -1,1 +1,1 @@
-### Please add solutions of July 2024
+### Added all POTDs of GFG JULY Month
