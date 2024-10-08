@@ -2,6 +2,7 @@
 
 Welcome to the GeeksforGeeks POTD Solutions repository! 🎉 This repository is dedicated to providing solutions to the Problem of the Day challenges from GeeksforGeeks. The solutions are written in a variety of programming languages and cover a wide range of topics.
 
+### **NOTE :  Issues has been already created just choose from there and comment in the specific issue with your solution name or project name and make PR**.
 
 ## What We Will Accept:
 ### Previous Solutions from GeeksforGeeks:
