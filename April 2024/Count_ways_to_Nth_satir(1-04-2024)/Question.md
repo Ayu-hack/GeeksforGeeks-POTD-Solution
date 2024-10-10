@@ -1,4 +1,4 @@
-## **1st April 2024**: 🪜 **Problem - Count Ways to N'th Stair**
+## **6th April 2024**: 🪜 **Problem - Count Ways to N'th Stair**
 
 ### 📝 **Problem Statement:**
 Given `n` stairs, you need to calculate the number of distinct ways a person can reach the top. The person can take either **1 stair** or **2 stairs** at a time, and **the order does not matter**.
