@@ -1,0 +1,8 @@
+#User function Template for python3
+import math as m
+
+#Complete this function
+class Solution:
+    def floorSqrt(self, n): 
+    #Your code here
+        return m.floor(n ** 0.5)
