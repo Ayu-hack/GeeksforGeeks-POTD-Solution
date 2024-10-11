@@ -1,0 +1,11 @@
+## Text-Summariser
+
+The PDF to Text Summarizer feature enables users to generate summaries from uploaded PDFs or text inputs. Developed with Streamlit and Python, it employs the txtai library for text summarization and PyPDF2 for efficient text extraction from PDFs.
+
+
+# Installation needed to be done
+
+   pip install streamlit
+   pip install txtai
+   pip install PyPDF2
+
