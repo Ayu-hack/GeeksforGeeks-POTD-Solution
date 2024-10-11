@@ -1,0 +1,23 @@
+<!-- templates/home.html file-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Flask Google Login Example Web Application</title>
+</head>
+
+<body>
+    {% if session %}
+    <h3>Welcome {{session.name}}!</h3>
+    <h3>Your email - {{session.email}}!</h3>
+    <h3>Your id_token - {{session.id_token}}!</h3>
+    <h><a href="{{url_for('logout')}}">Logout</a></h>
+    <div>
+        <pre>{{pretty}}</pre>
+    </div>
+    {% else %}
+    <p><a href="{{url_for('googleLogin')}}">Login with Google</a></p>
+    {% endif %}
+</body>
+
+</html>
