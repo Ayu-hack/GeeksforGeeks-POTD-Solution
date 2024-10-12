@@ -7,7 +7,8 @@
 |--------------|----------------------------------|-----------------------------|-----------------------------|----------------------------|
 | 6-04-2024    | Count ways to N'th Stair         | [Link](https://www.geeksforgeeks.org/problems/count-ways-to-nth-stairorder-does-not-matter1322/1)                    | [Link](#)                    | [YouTube Link](https://youtube.com/playlist?list=PLpIkg8OmuX-JhFpkhgrAwZRtukO0SkwAt&feature=shared)           |
 | 7-04-2024    | [Next Question Title]            | [Link](#)                    | [Link](#)                    | [YouTube Link](#)           |
-| 8-04-2024    | [Another Question Title]         | [Link](#)                    | [Link](#)                    | [YouTube Link](#)           |
+| 8-04-2024
+| 12-04-2024   | Sum Of Products                  | [Link](https://www.geeksforgeeks.org/problems/sum-of-products5049/1)                    | [Link](#)                    | [YouTube Link](#)           |
 
 ---
 
