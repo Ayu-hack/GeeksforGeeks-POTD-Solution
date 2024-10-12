@@ -1,0 +1,6 @@
+streamlit==0.89.0
+llama-index
+cohere
+langchain
+llama-cpp-python
+wget==3.2
