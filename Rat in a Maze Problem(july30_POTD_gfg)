@@ -1,0 +1,34 @@
+class Solution {
+  public:
+    void findPaths(int x, int y, vector<vector<int>>& mat, int n, vector<string>& paths, string path, vector<vector<int>>& visited) {
+        if (x == n - 1 && y == n - 1) {
+            paths.push_back(path);
+            return;
+        }
+        visited[x][y] = 1;
+        if (x + 1 < n && mat[x + 1][y] == 1 && !visited[x + 1][y]) {
+            findPaths(x + 1, y, mat, n, paths, path + 'D', visited);
+        }
+        if (y - 1 >= 0 && mat[x][y - 1] == 1 && !visited[x][y - 1]) {
+            findPaths(x, y - 1, mat, n, paths, path + 'L', visited);
+        }
+        if (y + 1 < n && mat[x][y + 1] == 1 && !visited[x][y + 1]) {
+            findPaths(x, y + 1, mat, n, paths, path + 'R', visited);
+        }
+        if (x - 1 >= 0 && mat[x - 1][y] == 1 && !visited[x - 1][y]) {
+            findPaths(x - 1, y, mat, n, paths, path + 'U', visited);
+        }
+        visited[x][y] = 0;
+    }
+    vector<string> findPath(vector<vector<int>>& mat) {
+        int n = mat.size();
+        vector<string> paths;
+        if (mat[0][0] == 0 || mat[n - 1][n - 1] == 0) {
+            return paths;
+        }
+        vector<vector<int>> visited(n, vector<int>(n, 0));
+        findPaths(0, 0, mat, n, paths, "", visited);
+        sort(paths.begin(), paths.end());
+        return paths;
+    }
+};
