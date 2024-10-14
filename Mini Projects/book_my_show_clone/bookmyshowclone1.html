@@ -113,20 +113,25 @@
         .movies-container {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             margin-bottom: 20px;
-            /* Add some space between rows of movie containers */
         }
 
         .movie {
+            flex: 1 1 calc(25% - 40px);
+            /* Adjust movie width, includes space between */
+            max-width: 200px;
+            /* Set a maximum width */
+            margin: 10px;
+            /* Add margin for spacing between movies */
             text-align: center;
             background-color: #222;
             border-radius: 10px;
             padding: 15px;
-            margin-right: 30px;
-            /* Increase space between movies */
             box-shadow: 0px 4px 12px rgba(255, 28, 28, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
 
 
         .movie:hover {
@@ -225,71 +230,62 @@
         </div>
     </section>
 
-    <!-- Bollywood Section -->
     <section class="movies-list">
         <h2 onclick="toggleSection('bollywood')">Bollywood</h2>
         <div id="bollywood" class="hidden">
-            <!-- Hindi Movies -->
+            <!-- Combine Hindi, Tamil, Telugu, and Malayalam Movies into one .movies-container -->
             <div class="movies-container">
-                <h3>Hindi</h3>
+                <!-- Hindi Movies -->
                 <div class="movie">
-                    <img src="pathaan.png" alt="Hindi Movie 1">
+                    <img src="pathaan.png" alt="Pathaan">
                     <h3>Pathaan</h3>
                     <button onclick="bookTicket('Pathaan')">Book</button>
                 </div>
                 <div class="movie">
-                    <img src="jawaan.png" alt="Hindi Movie 2">
+                    <img src="jawaan.png" alt="Jawaan">
                     <h3>Jawaan</h3>
                     <button onclick="bookTicket('Jawaan')">Book</button>
                 </div>
-            </div>
-
-            <!-- Tamil Movies -->
-            <div class="movies-container">
-                <h3>Tamil</h3>
+    
+                <!-- Tamil Movies -->
                 <div class="movie">
-                    <img src="master.png" alt="Tamil Movie 1">
+                    <img src="master.png" alt="Master">
                     <h3>Master</h3>
                     <button onclick="bookTicket('Master')">Book</button>
                 </div>
                 <div class="movie">
-                    <img src="karnan.png" alt="Tamil Movie 2">
+                    <img src="karnan.png" alt="Karnan">
                     <h3>Karnan</h3>
                     <button onclick="bookTicket('Karnan')">Book</button>
                 </div>
-            </div>
-
-            <!-- Telugu Movies -->
-            <div class="movies-container">
-                <h3>Telugu</h3>
+    
+                <!-- Telugu Movies -->
                 <div class="movie">
-                    <img src="rrr.png" alt="Telugu Movie 1">
+                    <img src="rrr.png" alt="RRR">
                     <h3>RRR</h3>
                     <button onclick="bookTicket('RRR')">Book</button>
                 </div>
                 <div class="movie">
-                    <img src="pushpa.png" alt="Telugu Movie 2">
+                    <img src="pushpa.png" alt="Pushpa">
                     <h3>Pushpa</h3>
                     <button onclick="bookTicket('Pushpa')">Book</button>
                 </div>
-            </div>
-
-            <!-- Malayalam Movies -->
-            <div class="movies-container">
-                <h3>Malayalam</h3>
+    
+                <!-- Malayalam Movies -->
                 <div class="movie">
-                    <img src="drishyam.png" alt="Malayalam Movie 1">
+                    <img src="drishyam.png" alt="Drishyam">
                     <h3>Drishyam</h3>
                     <button onclick="bookTicket('Drishyam')">Book</button>
                 </div>
                 <div class="movie">
-                    <img src="kumbalangi.png" alt="Malayalam Movie 2">
+                    <img src="kumbalangi.png" alt="Kumbalangi Nights">
                     <h3>Kumbalangi Nights</h3>
                     <button onclick="bookTicket('Kumbalangi Nights')">Book</button>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Hollywood Section -->
     <section class="movies-list">
