@@ -1,28 +1,29 @@
 #include <iostream>
 #include <vector>
 #include <climits>
+
 using namespace std;
 
 class Solution {
 public:
     long long maximumProduct(int n, vector<int> &arr, int l, int r) {
-        // Initializing the first element from subarray and another from outside subarray
-        long long num1 = LLONG_MIN;
-        long long num2 = LLONG_MIN;
+        long long maxInSubarray = LLONG_MIN;
+        long long maxOutsideSubarray = LLONG_MIN;
 
-        // Find the maximum element from the subarray arr[l:r]
-        for (int i = l; i <= r; i++) {
-            num1 = max(num1, (long long)(arr[i - 1]));
-        }
-
-        // Find the maximum product of num1 with elements outside arr[l:r]
+        // Traverse through the array and find the maximum values in and outside the subarray
         for (int i = 1; i <= n; i++) {
-            if (!(i >= l && i <= r)) {
-                num2 = max(num2, num1 * arr[i - 1]);
+            if (i >= l && i <= r) {
+                maxInSubarray = max(maxInSubarray, (long long)arr[i - 1]);  // Max element inside the subarray
+            } else {
+                maxOutsideSubarray = max(maxOutsideSubarray, (long long)arr[i - 1]);  // Max element outside the subarray
             }
         }
 
-        return num2;
+        // If no element outside subarray is found (i.e., maxOutsideSubarray is still LLONG_MIN), return 0
+        if (maxOutsideSubarray == LLONG_MIN) return 0;
+
+        // Return the product of the maximum element from the subarray and outside the subarray
+        return maxInSubarray * maxOutsideSubarray;
     }
 };
 

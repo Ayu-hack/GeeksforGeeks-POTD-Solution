@@ -1,0 +1,24 @@
+class Solution {
+public:
+    // Function to find sum of all possible substrings of the given string.
+    long long sumSubstrings(string s) {
+        long long MOD = 1000000007;
+        long long n = s.size();
+        long long result = 0;
+        long long current_sum = 0;
+        
+        // Traverse each digit in the string
+        for (int i = 0; i < n; i++) {
+            // Convert the character to an integer value
+            long long num = s[i] - '0';
+            
+            // Update current_sum for substrings ending at this position
+            current_sum = (current_sum * 10 + (i + 1) * num) % MOD;
+            
+            // Add the current_sum to the result
+            result = (result + current_sum) % MOD;
+        }
+        
+        return result;
+    }
+};
