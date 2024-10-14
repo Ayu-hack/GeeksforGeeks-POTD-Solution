@@ -1,0 +1,27 @@
+       return result;
+    }
+    queue<Node*> q;
+    q.push(root);
+    bool leftToRight = true;
+    while (!q.empty()) {
+        int size = q.size();
+        vector<int> ans(size); // Initialize ans vector for each level
+        for (int i = 0; i < size; i++) {
+          Node* temp = q.front();
+            q.pop();
+            int index = leftToRight ? i : size - i - 1;
+            ans[index]=temp->data; // Add elements to ans vector
+            if (temp->left) {
+                q.push(temp->left);
+            }
+            if (temp->right) {
+                q.push(temp->right);
+            }
+        }
+        leftToRight = !leftToRight;
+        for (auto i : ans) {
+            result.push_back(i);
+        }  }
+    return result;
+    }
+};
