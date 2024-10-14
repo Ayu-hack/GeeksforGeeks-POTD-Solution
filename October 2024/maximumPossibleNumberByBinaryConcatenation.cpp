@@ -9,49 +9,36 @@ using namespace std;
 class Solution {
 public:
     int maxGoodNumber(vector<int>& nums) {
-        
         int n = nums.size();
-        vector<string> binaries;  // Store binary representations as strings
+        vector<string> binaries;
 
-        // Convert each number to binary string and store it in the vector
-        for (int i = 0; i < n; i++) {
-            binaries.push_back(getBinary(nums[i]));
+        // Convert each number to a binary string and store in vector
+        for (int num : nums) {
+            binaries.push_back(toBinary(num));
         }
 
-        // Sort the binary strings to maximize the concatenated result
-        sort(binaries.begin(), binaries.end(), compareBinary);
+        // Sort binary strings to maximize concatenation
+        sort(binaries.begin(), binaries.end(), [](const string &a, const string &b) {
+            return a + b > b + a;
+        });
 
-        // If the largest binary string is "0", return 0 (handles all-zero cases)
+        // Handle case where all numbers are zero
         if (binaries[0] == "0") return 0;
 
-        // Concatenate the sorted binary strings
-        string res = "";
-        for (const string& bin : binaries) {
-            res += bin;
-        }
+        // Concatenate all sorted binary strings
+        string resultBinary = accumulate(binaries.begin(), binaries.end(), string());
 
-        // Convert the final concatenated binary string to integer and return it
-        return binaryToInt(res);
+        // Convert the final binary string to an integer and return it
+        return stoll(resultBinary, nullptr, 2);
     }
 
-    // Custom comparator to get the largest concatenation
-    static bool compareBinary(const string &a, const string &b) {
-        return a + b > b + a;
-    }
-
-    // Convert binary string to integer, handle large numbers with stoll
-    long long binaryToInt(const string& bin) {
-        return stoll(bin, nullptr, 2);  // Use stoll for large binary strings
-    }
-
-    // Convert an integer to a binary string
-    string getBinary(int q) {
-        if (q == 0) return "0";
-        return bitset<32>(q).to_string().substr(bitset<32>(q).to_string().find('1'));
+    // Helper function to convert integer to a binary string (optimized)
+    string toBinary(int num) {
+        if (num == 0) return "0";
+        return bitset<32>(num).to_string().substr(bitset<32>(num).to_string().find('1'));
     }
 };
 
-// Main function to test the solution
 int main() {
     Solution sol;
     
@@ -64,3 +51,4 @@ int main() {
 
     return 0;
 }
+

@@ -1,0 +1,15 @@
+class Solution {
+public:
+    // Function to count the number of nodes in a linked list
+    int getCount(struct Node* head) {
+        int count = 0;  // Initialize count to zero
+        
+        // Traverse the linked list until head becomes nullptr (end of the list)
+        while (head != nullptr) {
+            count++;        // Increment the count for each node
+            head = head->next;  // Move to the next node
+        }
+        
+        return count;  // Return the total count of nodes
+    }
+};

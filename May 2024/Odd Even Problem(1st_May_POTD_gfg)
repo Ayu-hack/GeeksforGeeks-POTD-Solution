@@ -1,0 +1,34 @@
+class Solution {
+public:
+    std::string oddEven(std::string s) {
+        // Step 1: Initialize a frequency array to count occurrences of each character
+        std::vector<int> freq(26, 0);
+        // Step 2: Count the frequency of each character in the string
+        for (char c : s) {
+            freq[c - 'a']++;
+        }
+        int x = 0, y = 0;
+        // Step 3: Iterate through the frequency array
+        for (int i = 0; i < 26; i++) {
+            int position = i + 1;  // 'a' is at position 1, 'b' at position 2, and so on
+            
+            if (position % 2 == 0) {
+                // Even position in alphabet
+                if (freq[i] % 2 == 0 && freq[i] > 0) {
+                    x++;
+                }
+            } else {
+                // Odd position in alphabet
+                if (freq[i] % 2 != 0) {
+                    y++;
+                }
+            }
+        }
+        // Step 4: Determine if the sum of x and y is even or odd
+        if ((x + y) % 2 == 0) {
+            return "EVEN";
+        } else {
+            return "ODD";
+        }
+    }
+};
