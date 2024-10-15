@@ -1,0 +1,27 @@
+[
+    {
+        "amount": 16000.0,
+        "category": "Electronics",
+        "date": "2024-10-15"
+    },
+    {
+        "amount": 1500.0,
+        "category": "Fast Food",
+        "date": "2024-10-15"
+    },
+    {
+        "amount": 21000.0,
+        "category": "Clothing",
+        "date": "2024-10-15"
+    },
+    {
+        "amount": 50000.0,
+        "category": "Household",
+        "date": "2024-10-15"
+    },
+    {
+        "amount": 1200.0,
+        "category": "Household",
+        "date": "2024-10-15"
+    }
+]
