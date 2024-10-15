@@ -6,15 +6,7 @@ A simple **Personal Expense Tracker** built with Python, featuring expense loggi
 
 - **Add Expenses**: Log expenses by amount, category, and optional date (defaults to today).
   - Categories available: 
-    Grocery
-    Stationary
-    Electronics
-    Household
-    Clothing 
-    Transport
-    Entertainment
-    Fast Food
-    Other
+    Grocery, Stationary, Electronics, Household, Clothing, Transport, Entertainment, Fast Food, Other
 
 - **View Expenses**: Displays a table of all logged expenses with the option to delete any entry.
   
