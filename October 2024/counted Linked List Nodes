@@ -1,0 +1,70 @@
+Problem Statement:
+Given a singly linked list, your task is to count the number of nodes in the list.
+
+Approach:
+Traverse the list starting from the head node.
+Increment a counter for each node encountered.
+Once the end of the list is reached (i.e., the next pointer is None), return the counter value.
+
+Solution Code (Python):
+
+# Define the Node class
+class Node:
+    def __init__(self, data):
+        self.data = data  # Node data
+        self.next = None  # Pointer to the next node
+
+# Define the LinkedList class
+class LinkedList:
+    def __init__(self):
+        self.head = None  # Head of the list
+
+    # Method to add a new node at the end of the list
+    def append(self, new_data):
+        new_node = Node(new_data)
+        if self.head is None:
+            self.head = new_node  # If the list is empty, the new node is the head
+            return
+        last = self.head
+        while last.next:
+            last = last.next  # Traverse to the end of the list
+        last.next = new_node  # Link the new node at the end
+
+    # Method to count the number of nodes in the list
+    def count_nodes(self):
+        count = 0  # Initialize count
+        current = self.head  # Start from the head
+        while current:
+            count += 1  # Increment count for each node
+            current = current.next  # Move to the next node
+        return count
+
+# Example Usage
+if __name__ == "__main__":
+    llist = LinkedList()  # Create a Linked List
+
+    # Append some nodes to the list
+    llist.append(10)
+    llist.append(20)
+    llist.append(30)
+    llist.append(40)
+
+    # Count the number of nodes
+    print(f"Number of nodes in the linked list: {llist.count_nodes()}")
+
+
+  Explanation:
+Node Class: Represents each node in the linked list. It contains the data and a reference to the next node (next).
+LinkedList Class: Contains methods for adding nodes and counting the nodes in the list.
+append(new_data): Adds a new node with the given data at the end of the list.
+count_nodes(): Traverses the list and counts the total number of nodes.
+Example Usage: The script appends four nodes to the linked list and prints the number of nodes using count_nodes().
+
+  
+Output:
+
+Number of nodes in the linked list: 4
+
+
+Time Complexity:
+Time Complexity: O(n), where n is the number of nodes in the linked list. This is because we traverse the entire list once to count the nodes.
