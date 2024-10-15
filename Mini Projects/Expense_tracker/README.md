@@ -22,11 +22,8 @@ A simple **Personal Expense Tracker** built with Python, featuring expense loggi
     cd expense-tracker
     ```
 
-2. Install required libraries (e.g., `matplotlib`):
-    ```bash
-    pip install -r requirements.txt
-    ```
-
+2. Install required libraries: matplotlib
+   
 3. Run the application:
     ```bash
     python tracker.py
@@ -38,11 +35,3 @@ A simple **Personal Expense Tracker** built with Python, featuring expense loggi
 2. **View & Delete Expenses**: Manage and delete expenses through the table view.
 3. **Pie Chart**: View a pie chart of expenses updated in real-time based on categories.
 
-## File Structure
-
-```text
-.
-├── tracker.py       # Main Python script
-├── expenses.json    # Stores expense data
-├── README.md        # Documentation
-└── requirements.txt # Required libraries
