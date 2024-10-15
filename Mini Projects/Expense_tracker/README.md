@@ -1,37 +1,52 @@
 # Personal Expense Tracker
 
-A simple **Personal Expense Tracker** built with Python, featuring expense logging, category-based tracking, and visualizations via a pie chart.
+A simple personal expense tracker built using Python's Tkinter for the GUI and Matplotlib for visualizing expenses in a pie chart.
 
 ## Features
 
-- **Add Expenses**: Log expenses by amount, category, and optional date (defaults to today).
-  - Categories available: 
-    Grocery, Stationary, Electronics, Household, Clothing, Transport, Entertainment, Fast Food, Other
+- **Add Expenses**: Log your expenses with amount, category, and date.
+- **View Expenses**: View added expenses in a table format.
+- **Delete Expenses**: Delete any expense from the list.
+- **Pie Chart Visualization**: Visualize expenses by category with a dynamic pie chart.
 
-- **View Expenses**: Displays a table of all logged expenses with the option to delete any entry.
-  
-- **Visualize Expenses**: A **pie chart** dynamically shows the distribution of expenses across different categories.
+## Categories
 
-- **Data Persistence**: All data is stored in `expenses.json`, so expenses persist even after the application is closed.
+- Grocery
+- Stationary
+- Electronics
+- Household
+- Clothing
+- Transport
+- Entertainment
+- Fast Food
+- Other
+
+## Requirements
+
+- Python 3.x
+- `matplotlib`
 
 ## Installation
 
 1. Clone the repository:
     ```bash
     git clone https://github.com/yourusername/expense-tracker.git
-    cd expense-tracker
+    cd Expense-tracker
     ```
-
-2. Install required libraries: matplotlib
-   
-3. Run the application:
+2. Install `matplotlib`:
     ```bash
-    python tracker.py
+    pip install matplotlib
+    ```
+3. Run the app:
+    ```bash
+    python expenses.py
     ```
 
 ## Usage
 
-1. **Add Expense**: Enter the amount, select the category, and add the expense (optional date input).
-2. **View & Delete Expenses**: Manage and delete expenses through the table view.
-3. **Pie Chart**: View a pie chart of expenses updated in real-time based on categories.
+1. **Add Expense**: Input amount, select category, and add the expense.
+2. **View & Delete Expenses**: Manage expenses through the table.
+3. **Pie Chart**: View real-time category breakdown of expenses.
 
+## License
+This project is licensed under the MIT License.
