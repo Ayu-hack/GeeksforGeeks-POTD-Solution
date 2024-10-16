@@ -1,0 +1,25 @@
+class Solution {
+  public:
+    // Function to rotate the matrix
+    vector<vector<int>> rotateMatrix(int k, vector<vector<int>> mat) {
+        // Creating a new matrix to store the rotated matrix
+        int n = mat.size();
+        int m = mat[0].size();
+        vector<vector<int>> ans(n, vector<int>(m));
+
+        // Taking modulo of k with m to handle cases where k exceeds m
+        k %= m;
+
+        // Iterating over rows and columns of the matrix
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                // Calculating the new column index for the rotated element
+                int newCol = (j - k + m) % m;
+                // Assigning the element at i,j in the original matrix to ans[i][newCol]
+                ans[i][newCol] = mat[i][j];
+            }
+        }
+        // Returning the rotated matrix
+        return ans;
+    }
+};
