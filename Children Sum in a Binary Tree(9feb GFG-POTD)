@@ -1,0 +1,23 @@
+
+class Solution{
+    public:
+    bool solve(Node* root){
+        if(root==nullptr){
+            return true;
+        }
+        if(!root->left && !root->right){
+            return true;
+        }
+         int leftData = (root->left) ? root->left->data : 0;
+        int rightData = (root->right) ? root->right->data : 0;
+            bool leftCheck=solve(root->left);
+        bool  rightCheck=solve(root->right);
+        return (root->data == leftData + rightData) && leftCheck && rightCheck;
+    }
+    
+    int isSumProperty(Node *root)
+    {
+     return solve(root) ? 1: 0;
+     
+    }
+};
