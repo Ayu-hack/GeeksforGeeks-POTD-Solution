@@ -1,0 +1,39 @@
+class Solution {
+  public:
+   Node* delete_head(Node* head){
+        if(head == nullptr || head->next == nullptr) return nullptr;
+        Node* toDelete = head;
+        head = head->next;
+        head->prev = nullptr;
+        delete(toDelete);
+        return head;
+    }
+    // Function to delete a node at given position.
+    Node* deleteNode(Node* head, int x) {
+        // Your code here
+        if(x == 1) return delete_head(head);
+        
+        int cnt = 0;
+        Node* temp = head;
+        
+        while(cnt < x-1 && temp){
+            cnt++;
+            temp = temp->next;
+        }
+        
+        if(temp && temp->next){
+            Node* toDelete = temp;
+            temp->prev->next = temp->next;
+            temp->next->prev = temp->prev;
+            delete(toDelete);
+        }
+        
+        else if(temp){
+            Node* toDelete = temp;
+            temp->prev->next = nullptr;
+            delete(temp);
+        }
+        
+        return head;
+    }
+};
