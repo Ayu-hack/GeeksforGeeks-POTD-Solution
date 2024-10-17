@@ -1,0 +1,34 @@
+class Solution
+{
+    public:
+    
+    // Function to reverse first k elements of a queue.
+    queue<int> modifyQueue(queue<int> q, int k) {
+        
+       deque< int >dq ;
+       int i = 1 ;
+       int remain = q.size() - k ;
+       while( i <= k )
+       {
+           dq.push_front( q.front() );
+           q.pop();
+           i++ ;
+       }
+       
+       int j = 1 ;
+       while( j <= remain )
+       {
+           dq.push_back( q.front() );
+           q.pop();
+           j++ ;
+       }
+       
+       while( !dq.empty() )
+       {
+           q.push( dq.front() );
+           dq.pop_front();
+       }
+       
+       return q ;
+    }
+};
