@@ -1,0 +1,28 @@
+ Node* h1=nullptr, *h2=nullptr;
+        if (head) h1=head;
+        if (head->next) h2=head->next;
+        if (h2->next){
+            Node* t1=h1; 
+            Node* t2=h2;
+            Node* temp=h2->next;
+            int ctr=0;
+            while (temp){
+                if (ctr%2==0){
+                    t1->next=temp;
+                    t1=t1->next;
+                }
+                else{
+                    t2->next=temp;
+                    t2=t2->next;
+                }
+                ctr++;
+                temp=temp->next;
+            }
+            t1->next=nullptr;
+            t2->next=nullptr;
+        }
+        else{
+            h1->next=nullptr;
+            h2->next=nullptr;
+        }
+        return {h1,h2};
