@@ -1,0 +1,55 @@
+class Solution
+{
+  public:
+    // Returns adjacency list representation of graph from
+    // given set of pairs.
+    vector<vector<int> > make_graph(int numTasks,
+                 vector<vector<int>>& prerequisites)
+    {
+        vector<vector<int> > graph(numTasks);
+        for (auto pre : prerequisites)
+            graph[pre[1]].push_back(pre[0]);
+        return graph;
+    }
+
+    // Computes in-degree of every vertex
+    vector<int> compute_indegree(vector<vector<int> >& graph)
+    {
+        vector<int> degrees(graph.size(), 0);
+        for (auto neighbors : graph)
+            for (int neigh : neighbors)
+                degrees[neigh]++;
+        return degrees;
+    }
+    vector<int> findOrder(int n, int m, vector<vector<int>> prerequisites) 
+    {
+        // Create an adjacency list
+        vector<vector<int>> graph =
+                make_graph(n, prerequisites);
+
+        // Find vertices of zero degree
+        vector<int> degrees = compute_indegree(graph);
+        queue<int> zeros;
+        for (int i = 0; i < n; i++)
+            if (!degrees[i])
+                zeros.push(i);
+
+        // Find vertices in topological order
+        // starting with vertices of 0 degree
+        // and reducing degrees of adjacent.
+        vector<int> toposort;
+        for (int i = 0; i < n; i++) {
+            if (zeros.empty())
+                return {};
+            int zero = zeros.front();
+            zeros.pop();
+            toposort.push_back(zero);
+            for (int neigh : graph[zero]) {
+                if (!--degrees[neigh])
+                    zeros.push(neigh);
+            }
+        }
+        return toposort;
+    }
+};
+
