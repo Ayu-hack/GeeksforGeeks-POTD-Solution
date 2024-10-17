@@ -1,0 +1,29 @@
+# LeetCode Daily Question (2024-10-17) 670. Maximum Swap
+
+class Solution:
+    def maximumSwap(self, num: int) -> int:
+        # Time: O(N)
+        # Space: O(N)
+        digits = str(num)
+        counts = {}
+        for i in range(len(digits)):
+            if digits[i] in counts:
+                counts[digits[i]].append(i)
+            else:
+                counts[digits[i]] = [i]
+    
+
+        currIdx = 0
+        for key in sorted(counts.keys(), reverse=True):
+            for i in counts[key]:
+                if i == currIdx:
+                    # The highest possible digit for that index is assigned
+                    currIdx += 1
+                else:
+                    # Not optimal, so swap
+                    pos = counts[key][-1]
+                    digits = list(digits)
+                    digits[currIdx], digits[pos] = digits[pos], digits[currIdx]
+                    return int(''.join(digits))
+
+        return num
