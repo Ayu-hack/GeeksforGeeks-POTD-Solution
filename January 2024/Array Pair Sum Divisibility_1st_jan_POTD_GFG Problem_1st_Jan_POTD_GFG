@@ -1,0 +1,22 @@
+bool canPair(vector<int> nums, int k) {
+    vector<int> freq(k, 0);
+
+    // Count frequencies of remainders
+    for (int num : nums) {
+        int remainder = num % k;
+        freq[remainder]++;
+    }
+
+    // Check for pairing conditions
+    for (int i = 0; i <= k / 2; i++) {
+        if (i == 0) {
+            // For remainder 0, frequency must be even
+            if (freq[i] % 2 != 0) return false;
+        } else {
+            // For remainder i, freq[i] must match freq[k-i]
+            if (freq[i] != freq[k - i]) return false;
+        }
+    }
+
+    return true;  // All pairs can be formed
+}
