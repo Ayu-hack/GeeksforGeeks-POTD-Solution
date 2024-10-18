@@ -1,0 +1,11 @@
+class Solution{
+  public:
+   void swapElements(int arr[], int n) {
+    // Swap every ith element with the (i+2)th element
+    for (int i = 0; i < n - 2; i++) {
+        // Perform the swap
+        std::swap(arr[i], arr[i + 2]);
+    }
+}
+
+};
