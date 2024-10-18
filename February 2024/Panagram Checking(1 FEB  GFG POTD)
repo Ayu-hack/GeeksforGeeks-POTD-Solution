@@ -1,0 +1,25 @@
+class Solution
+{
+  public:
+    //Function to check if a string is Pangram or not.
+    bool checkPangram (string s) {
+       vector<int>ans(26,0);
+        for(int i=0;i<s.length();i++)
+        {
+            
+             char ch=s[i];
+             if(ch>=65 && ch<=90) 
+             ans[ch-'A']++;
+             
+            else if(ch>=97 && ch<=122)
+             ans[ch-'a']++;
+            
+        }
+        for(int i=0;i<26;i++)
+        {
+            if(ans[i]==0) return false;
+        }
+        return true;
+    }
+
+};
