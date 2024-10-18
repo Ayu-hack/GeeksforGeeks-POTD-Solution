@@ -1,0 +1,21 @@
+class Solution
+{
+  public:
+    //Function to check if a string is Pangram or not.
+    bool checkPangram(string s) {
+        vector<bool> alphabet(26, false); // Array to keep track of each letter
+        int count = 0; // Counter to track distinct letters
+
+        for (char c : s) {
+            if (isalpha(c)) {  // Check if the character is a letter
+                int index = tolower(c) - 'a';  // Convert the letter to lowercase and calculate index
+                if (!alphabet[index]) {  // If the letter hasn't been marked yet
+                    alphabet[index] = true;  // Mark it
+                    count++;  // Increment the counter
+                }
+            }
+            if (count == 26) return true;  // If all 26 letters are found, it's a pangram
+        }
+        return false;  // If not all letters are found, return false
+    }
+};
