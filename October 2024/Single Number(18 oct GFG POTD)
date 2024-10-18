@@ -1,0 +1,12 @@
+class Solution {
+  public:
+    int getSingle(vector<int>& arr) {
+      int xor_prod;
+      for(int it:arr){
+          xor_prod=xor_prod^it;
+      }
+      
+      return xor_prod;
+        
+    }
+};
