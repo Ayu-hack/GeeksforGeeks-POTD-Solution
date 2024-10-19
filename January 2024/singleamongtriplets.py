@@ -9,7 +9,7 @@ class Solution:
         Parameters:
         arr (list): The input array containing integers.
         N (int): The length of the input array.
-        
+    
         Returns:
         int: The element that appears only once in the array.
         """
