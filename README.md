@@ -4,6 +4,13 @@ Welcome to the GeeksforGeeks POTD Solutions repository! 🎉 This repository is 
 
 ### **NOTE :  Issues has been already created just choose from there and comment in the specific issue with your solution name or project name and make PR**.
 
+### Here are the **RULES** for contributing to the repository:
+
+- Comment on the respective issue to get it assigned to you first.
+- Create a Pull Request (PR) and push the code file with the correct file extension. Ensure no other unwanted files are included and push it in the respective folder.
+- Share the screenshot.
+- The PR will be merged easily.
+
 ## What We Will Accept:
 ### Previous Solutions from GeeksforGeeks:
 - Submit past GeeksforGeeks problem solutions along with the date and month.
