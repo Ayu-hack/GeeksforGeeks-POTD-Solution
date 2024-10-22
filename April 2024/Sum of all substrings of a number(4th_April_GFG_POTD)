@@ -1,0 +1,23 @@
+class Solution {
+public:
+    // Function to find sum of all possible substrings of the given string.
+    long long sumSubstrings(string s) {
+        const int MOD = 1000000007;
+        int n = s.length();
+        long long sum = 0;  // To store the final result
+        long long prev_sum = 0;  // To store the sum of substrings ending at the previous character
+        
+        for (int i = 0; i < n; ++i) {
+            // Convert current character to integer
+            int num = s[i] - '0';
+            
+            // Calculate the sum of all substrings ending at index i
+            prev_sum = (prev_sum * 10 + num * (i + 1)) % MOD;
+            
+            // Add the current value to the total sum
+            sum = (sum + prev_sum) % MOD;
+        }
+        
+        return sum;
+    }
+};

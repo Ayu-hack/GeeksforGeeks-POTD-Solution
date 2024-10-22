@@ -1,0 +1,20 @@
+class Solution {
+public:
+    vector<int> recamanSequence(int n) {
+        vector<int> sequence(n);       
+        unordered_set<int> seen;        
+        sequence[0] = 0;                
+        seen.insert(0);
+        for (int i = 1; i < n; ++i) {
+            int prev = sequence[i - 1];
+            int next_val = prev - i;   
+            if (next_val > 0 && seen.find(next_val) == seen.end()) {
+                sequence[i] = next_val; 
+            } else {
+                sequence[i] = prev + i; 
+            }
+            seen.insert(sequence[i]);  
+        }
+        return sequence;
+    }
+};

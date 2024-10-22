@@ -1,0 +1,57 @@
+class Solution {
+    private:
+   void addathead(Node* &head, int data) {
+    Node* temp = new Node(data);
+    if (head == NULL) {
+        head = temp;
+        return;
+    }
+    Node* move = head;
+    while (move->next != NULL) {
+        move = move->next;
+    }
+    move->next = temp;
+}  Node* reverselist(Node* &head) {
+    if (head == NULL || head->next == NULL) {
+        return head;
+    }
+    Node* prev = NULL;
+    Node* curr = head;
+    Node* next = NULL;
+    while (curr != NULL) {
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+    return prev;
+}
+  public:
+    // Function to add two numbers represented by linked list.
+   Node* addTwoLists(Node* num1, Node* num2) {
+    if (num1 == NULL) return num2;
+    if (num2 == NULL) return num1;
+
+    Node* head1 = reverselist(num1);
+    Node* head2 = reverselist(num2);
+
+    int carry = 0;
+    Node* newhead = NULL;
+    while (head1 != NULL || head2 != NULL || carry) {
+        int sum = carry;
+        if (head1 != NULL) {
+            sum += head1->data;
+            head1 = head1->next;
+        }
+        if (head2 != NULL) {
+            sum += head2->data;
+            head2 = head2->next;
+        }
+        int val = sum % 10;
+        carry = sum / 10;
+        addathead(newhead, val);
+    }
+
+    return reverselist(newhead);
+}
+};
