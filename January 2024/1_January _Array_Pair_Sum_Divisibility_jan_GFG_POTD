@@ -1,0 +1,32 @@
+class Solution {
+    public boolean canPair(int[] nums, int k) {
+        // Create an array to count remainders
+        int[] remainderCount = new int[k];
+
+        // Fill the remainder count array
+        for (int num : nums) {
+            int remainder = ((num % k) + k) % k; // Handle negative numbers by normalizing them
+            remainderCount[remainder]++;
+        }
+
+        // Check the conditions for valid pairing
+        // 1. For remainder 0, the count must be even
+        if (remainderCount[0] % 2 != 0) {
+            return false;
+        }
+
+        // 2. Check pairs for all other remainders
+        for (int i = 1; i <= k / 2; i++) {
+            if (i == k - i) {
+                // If k is even, the remainder k/2 should also have an even count
+                if (remainderCount[i] % 2 != 0) {
+                    return false;
+                }
+            } else if (remainderCount[i] != remainderCount[k - i]) {
+                return false;
+            }
+        }
+
+        return true; // All pairs are valid
+    }
+}
