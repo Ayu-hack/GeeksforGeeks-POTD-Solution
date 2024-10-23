@@ -1,0 +1,34 @@
+class Solution {
+public:
+    int solve(int index, int prev, vector<int>& a, vector<vector<int>>& dp) {
+        if (index == a.size()) {
+            return 0;
+        }
+        
+        if (dp[index][prev + 1] != -1) {
+            return dp[index][prev + 1];
+        }
+        
+        int not_taken = solve(index + 1, prev, a, dp);
+        int taken = 0;
+        
+        if (prev == -1 || abs(a[index] - a[prev]) == 1) {
+            taken = 1 + solve(index + 1, index, a, dp);
+        }
+        
+        int ans = max(taken, not_taken);
+        dp[index][prev + 1] = ans;
+        return ans;
+    }
+    
+    int longestSubseq(int n, vector<int> &a) {
+        int curr = 0;
+        int prev = -1;
+        vector<vector<int>> dp(n, vector<int>(n + 1, -1));
+        int ans = solve(curr, prev, a, dp);
+        return ans;
+    }
+};
+
+
+PLEASE ASSIGN ME THIS.
