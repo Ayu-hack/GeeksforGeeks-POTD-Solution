@@ -1,0 +1,8 @@
+class Solution {
+  public:
+    int swapNibbles(int n) {
+        // code here
+           int  swapnum = ((n & 0x0F) << 4 | (n & 0xF0) >> 4);
+        return swapnum;
+    }
+};
