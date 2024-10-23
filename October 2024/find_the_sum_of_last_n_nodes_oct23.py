@@ -1,11 +1,4 @@
 
-'''
-# Node Class
-class Node:
-    def __init__(self, data):   # data -> value stored in node
-        self.data = data
-        self.next = None
-'''
 class Solution:
     def sumOfLastN_Nodes(self, head, n):
         current = head
@@ -28,9 +21,7 @@ class Solution:
         return sum
 
 
-#{ 
- # Driver Code Starts
-#Initial Template for Python 3
+
 
 
 class Node:
@@ -57,4 +48,3 @@ if __name__ == "__main__":
         ob = Solution()
         print(ob.sumOfLastN_Nodes(head, n))
 
-# } Driver Code Ends
