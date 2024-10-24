@@ -1,0 +1,75 @@
+class Solution {
+ private:
+  DLLNode * mergeSort(  DLLNode * left ,  DLLNode * right )
+  {
+       if( left == NULL ) return right ;
+       if( right == NULL ) return left ;
+       DLLNode * dummy = new  DLLNode( -1 );
+       DLLNode * temp = dummy ;
+       while( left && right )
+       {
+           if( left ->data < right ->data )
+           {
+               temp ->next = left ;
+               left ->prev = temp ;
+               temp = left ;
+               left = left ->next ;
+            //   left ->prev = NULL ;
+           }
+           else 
+           {
+               temp ->next = right ;
+               right ->prev = temp ;
+               temp = right ;
+               right = right ->next ;
+            //   right ->prev = NULL ;
+           }
+       }
+       while( left )
+       {
+           temp ->next = left ;
+           left ->prev = temp ;
+           temp = left ;
+           left = left ->next ;
+        //   left ->prev = NULL ;
+       }
+       while( right )
+       {
+           
+           temp ->next = right ;
+           right ->prev = temp ;
+           temp = right ;
+           right = right ->next ;
+        //   right ->prev = NULL ;
+       }
+        DLLNode * start = dummy ->next ;
+       dummy->next ->prev = NULL ;
+      return start  ;
+  }
+ private :
+  DLLNode * getmid(  DLLNode * head )
+  {
+       DLLNode * slow = head ;
+        DLLNode * fast = head ->next ;
+        while( fast && fast ->next )
+        {
+            slow = slow ->next ;
+            fast = fast ->next ->next ;
+        }
+        return slow ;
+  }
+  public:
+    DLLNode *sortDoubly(DLLNode *head) {
+      if( head == NULL || head ->next == NULL )
+      {
+          return head ;
+      }
+       DLLNode * mid = getmid( head );
+        DLLNode * right = mid ->next ;
+        right ->prev = NULL ;
+        mid ->next = NULL ;
+        DLLNode * left = sortDoubly( head );
+         right = sortDoubly( right );
+        return  mergeSort( left ,  right );
+    }
+};
