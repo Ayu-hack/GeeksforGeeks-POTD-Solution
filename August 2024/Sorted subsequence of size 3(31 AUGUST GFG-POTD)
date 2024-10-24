@@ -1,0 +1,29 @@
+class Solution {
+  public:
+    vector<int> find3Numbers(vector<int> &arr) {
+        // Code here
+        
+        int n = arr.size();
+        if(n < 3){
+            return{};
+        }
+       vector<int>minPre(n);
+       vector<int>maxSuff(n);
+       minPre[0] = arr[0];
+       for(int i = 1; i < n; i++){
+           minPre[i] = min(minPre[i-1],arr[i-1]);
+       }
+       maxSuff[n-1] = arr[n-1];
+       for(int i = n-2; i>=0; i--){
+           maxSuff[i] =max(maxSuff[i+1],arr[i+1]);
+       }
+       for(int i = 1 ; i < n ;i++){
+            if(minPre[i] < arr[i] && maxSuff[i] > arr[i]){
+                  //cout << minPre[i] << " " <<arr[i] << " "<<maxSuff[i];
+                  return{minPre[i],arr[i],maxSuff[i]};
+             }
+          }
+       
+       return {};
+    }
+};
