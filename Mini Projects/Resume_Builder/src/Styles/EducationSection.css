@@ -1,0 +1,42 @@
+.MuiPaper-root.MuiPaper-elevation.education-paper {
+  width: 75%;
+  padding: 40px;
+  margin-right: 0px;
+  height: fit-content;
+}
+
+.education-heading {
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.education-form-cont {
+  width: 100%;
+  padding: 20px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 450px) {
+  .education-form-cont {
+    grid-template-columns: 1fr;
+    
+  }
+}
+@media screen and (min-width: 1010px) and (max-width: 1300px) {
+  .MuiPaper-root.MuiPaper-elevation.education-paper{
+    width: 90%;
+    padding: 40px;
+
+  }
+}
+@media screen and (max-width: 1010px) {
+  .MuiPaper-root.MuiPaper-elevation.education-paper{
+    width: 100%;
+    padding: 20px;
+
+  }
+}

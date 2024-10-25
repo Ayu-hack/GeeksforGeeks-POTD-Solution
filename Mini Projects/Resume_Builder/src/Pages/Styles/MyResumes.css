@@ -1,0 +1,72 @@
+.my-resumes {
+  width: 100%;
+  background-color: rgba(228, 228, 228, 0.722);
+  padding: 50px;
+  justify-items: center;
+}
+
+.resume {
+  position: relative;
+}
+.resume:hover .black-screen {
+  visibility: visible;
+  width: 100%;
+}
+
+.resume:hover {
+  cursor: pointer;
+}
+
+.use-template-btn-cont {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: none;
+ 
+}
+
+.resume:hover .use-template-btn-cont {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 5;
+
+}
+
+.use-template-btn-cont .MuiButtonBase-root.MuiButton-root.use-template-btn {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  visibility: visible;
+  text-transform: capitalize;
+
+}
+
+.no-resumes-container {
+  width: 100%;
+  display: flex;
+  padding-top: 150px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-resumes-container .no-resumes-container .no-resumes-text {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 500px) {
+  .my-resumes {
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .my-resumes-container {
+    justify-content: center;
+    padding: 40px 30px !important;
+  }
+}

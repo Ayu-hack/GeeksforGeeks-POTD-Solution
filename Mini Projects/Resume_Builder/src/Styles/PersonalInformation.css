@@ -1,0 +1,50 @@
+.MuiPaper-root.MuiPaper-elevation.personal-info-paper {
+  width: 75%;
+  padding: 40px;
+  margin-right: 0px;
+  height: fit-content;
+}
+
+.MuiButtonBase-root.MuiButton-root.change-profile-photo-btn {
+  font-size: 14px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+.personal-info-form-fields {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.MuiDivider-root.personal-details-divider {
+  border-bottom-width: 2px;
+  margin: 20px 0px;
+}
+@media screen and (max-width: 1010px) {
+  .MuiPaper-root.MuiPaper-elevation.personal-info-paper{
+    width: 100%;
+    padding: 20px;
+
+  }
+}
+@media screen and (min-width: 1010px) and (max-width: 1300px) {
+  .MuiPaper-root.MuiPaper-elevation.personal-info-paper{
+    width: 90%;
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .personal-info-form-fields {
+    grid-template-columns: 1fr;
+    
+  }
+}
+
+.css-3su884-MuiPaper-root {
+  border: 1px solid black;
+  background-color: whitesmoke !important;
+}

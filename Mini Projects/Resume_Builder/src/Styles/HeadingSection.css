@@ -1,0 +1,19 @@
+.professional-experience-heading {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.vertical-line {
+  width: 100%;
+  border: none;
+  height: 2px;
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 500px) {
+  .professional-experience-heading {
+    font-size: 13px;
+  }
+}

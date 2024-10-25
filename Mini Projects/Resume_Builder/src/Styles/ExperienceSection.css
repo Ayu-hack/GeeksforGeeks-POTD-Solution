@@ -1,0 +1,17 @@
+.experience-heading {
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.experience-org-name,
+.experience-start-end {
+  font-size: 12px;
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.experience-start-end {
+  font-style: italic;
+  margin-left: 4px;
+}

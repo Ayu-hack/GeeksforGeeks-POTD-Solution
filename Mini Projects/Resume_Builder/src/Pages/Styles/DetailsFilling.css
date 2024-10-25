@@ -1,0 +1,28 @@
+
+.details-filling {
+  width: 100%;
+}
+
+.details-filling-cont {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 100px;
+  padding: 60px 80px;
+}
+@media screen and (max-width: 850px) {
+  .details-filling-cont {
+    display: grid;
+    grid-template-columns: 0.3fr 4fr;
+    grid-gap: 10px;
+    padding: 40px 30px;
+    padding-left: 10px;
+  }
+}
+@media screen and (min-width: 850px) and (max-width: 1000px) {
+  .details-filling-cont {
+    grid-gap: 20px;
+    padding: 40px 40px;
+
+  }
+}
+/* RajdeepDey010 */
