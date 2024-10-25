@@ -1,0 +1,39 @@
+.preview-header-title {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.resume-preview-grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.resume-preview-grid-item {
+  width: 100%;
+}
+
+.resume-preview-grid-item .resume-save-container {
+  width: 100%;
+}
+
+.resume-preview-grid-item .resume-save-container .resume-save-title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: rgb(99, 93, 93);
+  margin-bottom: 15px;
+}
+.MuiFormControl-root.MuiTextField-root.resume-name-field {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.resume-preview-grid-item .resume-save-container .resume-back-next-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}

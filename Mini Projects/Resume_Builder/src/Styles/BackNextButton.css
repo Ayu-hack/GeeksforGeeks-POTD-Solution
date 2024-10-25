@@ -1,0 +1,14 @@
+.back-next-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.MuiButtonBase-root.MuiButton-root.outlined-btn,
+.MuiButtonBase-root.MuiButton-root.contained-btn {
+  text-transform: capitalize;
+  width: 100px;
+}
+
+

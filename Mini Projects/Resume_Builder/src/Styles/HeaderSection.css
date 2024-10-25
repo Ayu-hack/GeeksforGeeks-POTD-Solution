@@ -1,0 +1,82 @@
+
+.template-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 20px 0px;
+  margin-bottom: 10px;
+}
+
+.template-header-first {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.template-img-cont {
+  width: 90px;
+  border-radius: 50%;
+  background-color: rgb(193, 193, 193);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.template-img-cont .template-profile-img {
+  width: 100%;
+}
+
+.template-img-text {
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.template-user-details-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 25px;
+}
+
+.template-user-name {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 5px;
+}
+
+.template-user-designation {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.template-header-second {
+  width: 20%;
+  margin-right: 30px;
+  text-align: left;
+  font-size: 11px;
+}
+
+.template-user-about {
+  font-size: 12px;
+  padding: 0px 0px 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .template-user-name {
+    font-size: 4vw;
+    font-weight: 600;
+  }
+  .template-user-details-cont {
+    margin-left: 15px;
+  }
+  .template-img-cont {
+    width: 30%;
+  }
+}
