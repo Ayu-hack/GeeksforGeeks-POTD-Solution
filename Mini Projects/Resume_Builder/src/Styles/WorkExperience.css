@@ -1,0 +1,59 @@
+.MuiPaper-root.MuiPaper-elevation.work-experience-paper {
+  width: 75%;
+  padding: 40px;
+  margin-right: 0px;
+  height: fit-content;
+}
+
+.work-experience-heading {
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.add-new-btn-cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-cont {
+  width: 100%;
+}
+
+.experience-heading {
+  font-size: 14px;
+}
+
+.experience-form-cont {
+  width: 100%;
+  padding: 20px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1010px) {
+  .MuiPaper-root.MuiPaper-elevation.work-experience-paper {
+    width: 100%;
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 1010px) and (max-width: 1300px) {
+  .MuiPaper-root.MuiPaper-elevation.work-experience-paper {
+    width: 90%;
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .education-form-cont {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-form-cont {
+    grid-template-columns: 1fr;
+  }
+}

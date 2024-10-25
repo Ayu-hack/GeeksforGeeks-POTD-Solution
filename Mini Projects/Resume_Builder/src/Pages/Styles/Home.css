@@ -1,0 +1,106 @@
+*{
+  padding:0px;
+  margin : 0px;
+  box-sizing: border-box;
+}
+
+.home-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.home {
+  background-color: gainsboro;
+  width: 90%;
+  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
+  margin-top: 45px;
+  
+ 
+}
+
+.home-templates-cont {
+  width: 100%;
+  padding: 30px 70px;
+
+}
+
+.template-header-title {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 1px;
+}
+
+.template-select-text {
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.templates-img-cont {
+  width: 100%;
+  position: relative; 
+}
+
+.templates-img-cont:hover {
+  cursor: pointer;
+}
+
+.templates-img-cont:hover .black-screen {
+  visibility: visible;
+}
+
+.template-img {
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.MuiButtonBase-root.MuiButton-root.use-template-btn {
+  position: absolute;
+  top: 50%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  visibility: hidden;
+  text-transform: capitalize;
+  background-color: lightskyblue;
+  color: black;
+}
+/* RajdeepDey010 */
+.templates-img-cont:hover .MuiButtonBase-root.MuiButton-root {
+  visibility: visible;
+}
+.homeInfoWrapper .grid{
+  display: flex;
+  justify-content: center;
+  padding: 50px ;
+  text-align: center;
+  gap: 20px;
+}
+.item3{
+  word-wrap: wrap;
+  position: relative;
+}
+.homeImage{
+  width: 300px;
+  height: 180px;
+}
+@media screen and (max-width: 450px) {
+  .home-templates-cont {
+    padding: 15px 30px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home-templates-cont {
+    padding: 20px 55px;
+  }
+  }
+
+
+*::-webkit-scrollbar {width: 7px;background-color:#f7f7f7} 
+*::-webkit-scrollbar-track {background-color:#474545} 
+*::-webkit-scrollbar-thumb { background-color:#f27979}
