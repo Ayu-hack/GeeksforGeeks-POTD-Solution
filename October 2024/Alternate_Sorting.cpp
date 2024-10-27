@@ -4,32 +4,29 @@ using namespace std;
 
 
 // } Driver Code Ends
-class Solution {
+#include <vector>
+#include <algorithm>
 
+class Solution {
   public:
-    vector<int> alternateSort(vector<int>& arr) {
-        // Your code goes here
-        vector<int>v;
-        for(int i=0;i<arr.size();i++){
-            v.push_back(arr[i]);
-        }
-        sort(v.begin(),v.end());
-        int first=0;
-        int second =v.size()-1;
-        int count=0;
-        while(first<second){
-            arr[count++]=v[second];
-            arr[count++]=v[first];
-            first++;
-            second--;
-        }
-        if(first ==second){
-            arr[count]=v[first];
-        }
-        return arr;
+    std::vector<int> alternateSort(std::vector<int>& arr) {
+        std::sort(arr.begin(), arr.end());  // Sort in-place
+        std::vector<int> result;
+        int left = 0, right = arr.size() - 1;
         
+        while (left <= right) {
+            if (left != right) {
+                result.push_back(arr[right--]);  // Largest remaining element
+                result.push_back(arr[left++]);   // Smallest remaining element
+            } else {
+                result.push_back(arr[left++]);   // Middle element (for odd-sized arrays)
+            }
+        }
+        
+        return result;
     }
 };
+
 
 
 //{ Driver Code Starts.
