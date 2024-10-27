@@ -1,0 +1,26 @@
+class Solution {
+    public static void find(long n, List<Long> ans)
+    {
+        if(n == 1) return ;
+        if(n % 2 == 0)
+        {
+            n =(long) Math.pow(n , 0.5);
+            ans.add(n);
+            find(n , ans);
+        }
+        else
+        {
+            n =(long) Math.pow(n , 1.5);
+            ans.add(n);
+            find(n , ans);
+        }
+    }
+    static List<Long> jugglerSequence(long n) {
+        // code here
+         List<Long> ans = new ArrayList<Long>();
+        ans.add(n);
+        find(n , ans);
+        
+        return ans;
+    }
+}
