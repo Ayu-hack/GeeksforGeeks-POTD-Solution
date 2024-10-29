@@ -1,0 +1,100 @@
+class Node {
+    int data;
+    Node next;
+    
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class LinkedListQuickSort {
+    Node head;
+
+    // Method to get the last node of the linked list
+    private Node getLastNode(Node node) {
+        while (node.next != null) {
+            node = node.next;
+        }
+        return node;
+    }
+
+    // Partition method to divide the list and return the pivot node
+    private Node partition(Node low, Node high) {
+        int pivot = high.data;
+        Node i = low;
+        Node j = low;
+
+        while (j != high) {
+            if (j.data < pivot) {
+                // Swap values at i and j
+                int temp = i.data;
+                i.data = j.data;
+                j.data = temp;
+                i = i.next;
+            }
+            j = j.next;
+        }
+        // Swap pivot with i
+        int temp = i.data;
+        i.data = high.data;
+        high.data = temp;
+        return i;
+    }
+
+    // Quick sort method on linked list
+    private void quickSort(Node low, Node high) {
+        if (low != high && low != null && high != null && low != high.next) {
+            Node pivot = partition(low, high);
+            quickSort(low, pivot);           // Sort left side
+            quickSort(pivot.next, high);     // Sort right side
+        }
+    }
+
+    // Public method to start quick sort
+    public void quickSort() {
+        quickSort(head, getLastNode(head));
+    }
+
+    // Helper method to insert a new node at the end of the linked list
+    public void insert(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = newNode;
+    }
+
+    // Method to print the linked list
+    public void printList() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+
+    // Main method to test quick sort on linked list
+    public static void main(String[] args) {
+        LinkedListQuickSort list = new LinkedListQuickSort();
+        list.insert(30);
+        list.insert(3);
+        list.insert(4);
+        list.insert(20);
+        list.insert(5);
+
+        System.out.println("Original list:");
+        list.printList();
+
+        list.quickSort();
+
+        System.out.println("Sorted list:");
+        list.printList();
+    }
+}
