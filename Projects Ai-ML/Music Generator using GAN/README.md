@@ -18,3 +18,7 @@ import warnings
 
 warnings.filterwarnings('ignore')
 ```
+
+#### Model Sumaary
+
+![image](https://github.com/user-attachments/assets/e9a971bc-718a-4516-8f9a-f5432edb77d2)
